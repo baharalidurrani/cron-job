@@ -3,7 +3,7 @@ name: Trigger Realtor Images Upload from files every 3rd minute.
 
 on:
   schedule:
-    # Runs "At every 3rd minute." (see https://crontab.guru)
+    # Runs "At every 3rd minute." (see https://crontab.guru/#*/3_*_*_*_*)
     - cron: "*/3 * * * *"
 jobs:
   build:
