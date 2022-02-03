@@ -1,16 +1,16 @@
-# .github/workflows/scheduled-builds.yml
-name: Trigger Realtor Images Upload from files every 3rd minute.
+# # .github/workflows/scheduled-builds.yml
+# name: Trigger Realtor Images Upload from files every 3rd minute.
 
-on:
-  schedule:
-    # Runs "At every 3rd minute." (see https://crontab.guru/#*/3_*_*_*_*)
-    - cron: "*/3 * * * *"
-jobs:
-  build:
-    name: Trigger Image Upload
-    runs-on: ubuntu-latest
-    steps:
-      - name: cURL request
-        # Hit the webhook endpoint to rebuild  from the "main" branch
-        # run: curl --location --request POST 'http://uat-api.homelendingpal.com/api/listhub/realtorreplica'
-        run: curl --location --request GET 'https://webhook.site/55794af7-e153-44b9-af6c-93cb5913141d'
+# on:
+#   schedule:
+#     # Runs "At every 3rd minute." (see https://crontab.guru/#*/3_*_*_*_*)
+#     - cron: "*/3 * * * *"
+# jobs:
+#   build:
+#     name: Trigger Image Upload
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: cURL request
+#         # Hit the webhook endpoint to rebuild  from the "main" branch
+#         # run: curl --location --request POST 'http://uat-api.homelendingpal.com/api/listhub/realtorreplica'
+#         run: curl --location --request GET 'https://webhook.site/55794af7-e153-44b9-af6c-93cb5913141d'
